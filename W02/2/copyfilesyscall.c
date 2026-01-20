@@ -18,9 +18,7 @@ int main() {
     }
 
     /* Create destination file */
-    dst_fd = open("copyresult.txt",
-                  O_WRONLY | O_CREAT | O_TRUNC,
-                  0644);
+    dst_fd = open("copyresult.txt", O_WRONLY | O_CREAT | O_TRUNC,0644);
     if (dst_fd < 0) {
         write(2, "Error: Cannot create copyresult.txt\n", 37);
         close(src_fd);
@@ -32,6 +30,8 @@ int main() {
         write(dst_fd, buffer, bytesRead);
     }
 
+    const char *message = "Done Copy!\n";
+    write(1, message, 11);
     /* Close files */
     close(src_fd);
     close(dst_fd);
