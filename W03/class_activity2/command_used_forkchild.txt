@@ -1,0 +1,15 @@
+  219  ls
+  220  cd lab2
+  221  ls
+  222  cd ..
+  223  ls
+  224  cd class_activity2/
+  225  ls
+  226  code forkchild.c
+  227  vim forkchild.c
+  228  gcc forkchildk.c -o forkchild
+  229  ls
+  230  gcc forkchild.c -o forkchild
+  231  ./forkchild 
+  232  ./forkchild > result_forkchild.txt
+  233  history | tail -n 15 > command_used_forkchild.txt
